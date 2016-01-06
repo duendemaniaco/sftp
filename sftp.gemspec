@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.authors       = ["Fábio Costa"]
   s.email         = 'fabioatc@gmail.com'
   s.files         = `git ls-files`.split($/)
-  s.homepage      = ''
+  s.homepage      = 'https://github.com/duendemaniaco/'
 
-  s.add_dependency 'net/sftp'
+  s.add_dependency 'net-sftp'
 end

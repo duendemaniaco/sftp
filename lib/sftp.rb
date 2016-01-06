@@ -1,7 +1,6 @@
 require 'net/sftp'
 class SFTP
   # check: http://www.rubydoc.info/gems/net-sftp/2.0.5
-  attr_reader :sftp
   # ====================================================================
   def initialize host, username, password
     @sftp = Net::SFTP.start(host, username, :password => password)
@@ -11,7 +10,7 @@ class SFTP
     @sftp.upload!(local_path, remote_path)
   end
   # ====================================================================
-  def download remote_path, local_path
+  def download remote_path, local_path="."
     @sftp.download!(remote_path, local_path)
   end
   # ====================================================================
