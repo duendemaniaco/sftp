@@ -14,6 +14,10 @@ class SFTP
     @sftp.download!(remote_path, local_path)
   end
   # ====================================================================
+  def remove remote_path
+    @sftp.remove remote_path
+  end
+  # ====================================================================
   def file_info remote_path
 
   end
